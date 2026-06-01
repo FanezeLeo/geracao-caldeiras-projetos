@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Leitura {
     public static void main(String[] args) {
+
+
         Scanner in = new Scanner(System.in);
         System.out.print("Digite seu filme: ");
         String filme = in.nextLine();
