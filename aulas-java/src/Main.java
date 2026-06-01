@@ -10,6 +10,7 @@ public class Main{
         double notaDoFilme = 8.1;
 
         double media = (9.8 + 6.3 + 8.0) / 3;
+        int classificacao = (int) (media / 2);
 
 //        System.out.println(media);
 
@@ -17,8 +18,9 @@ public class Main{
             %s
             Sinopse: Filme de aventura!
             Nota do fime: %.1f
+            Média: %d
             Ano de lançamento: %d
-            """.formatted(nomeDoFilme, notaDoFilme, anoDeLancamento);
+            """.formatted(nomeDoFilme, notaDoFilme, classificacao, anoDeLancamento);
         System.out.println(sinopse);
     }
 }
