@@ -58,14 +58,6 @@ public class Filme {
         this.incluidoNoPlano = incluidoNoPlano;
     }
 
-    public void setValorTotalAvaliacoes(double valorTotalAvaliacoes) {
-        this.valorTotalAvaliacoes = valorTotalAvaliacoes;
-    }
-
-    public void setTotalDeAvaliacoes(int totalDeAvaliacoes) {
-        this.totalDeAvaliacoes = totalDeAvaliacoes;
-    }
-
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
