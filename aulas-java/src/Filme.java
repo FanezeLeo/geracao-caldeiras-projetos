@@ -19,4 +19,28 @@ public class Filme {
     public double MediaAvaliacao(){
         return valorTotalAvaliacoes / totalDeAvaliacoes;
     }
+
+    public String getNomeDoFilme() {
+        return nomeDoFilme;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
+    }
+
+    public double getValorTotalAvaliacoes() {
+        return valorTotalAvaliacoes;
+    }
+
+    public int getTotalDeAvaliacoes() {
+        return totalDeAvaliacoes;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
 }
