@@ -1,7 +1,9 @@
+package br.com.caldeiras.screenmatch.modelos;
+
 public class Filme {
     String nomeDoFilme;
     private int anoDeLancamento;
-    private boolean incluidoNoPlano = true;
+    private boolean incluidoNoPlano;
     private double valorTotalAvaliacoes;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
@@ -42,5 +44,29 @@ public class Filme {
 
     public int getDuracaoEmMinutos() {
         return duracaoEmMinutos;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setNomeDoFilme(String nomeDoFilme) {
+        this.nomeDoFilme = nomeDoFilme;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public void setValorTotalAvaliacoes(double valorTotalAvaliacoes) {
+        this.valorTotalAvaliacoes = valorTotalAvaliacoes;
+    }
+
+    public void setTotalDeAvaliacoes(int totalDeAvaliacoes) {
+        this.totalDeAvaliacoes = totalDeAvaliacoes;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
     }
 }
