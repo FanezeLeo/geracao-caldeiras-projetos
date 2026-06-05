@@ -1,7 +1,7 @@
 package br.com.caldeiras.screenmatch.modelos;
 
 public class Titulo {
-    String nomeDoFilme;
+    String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double valorTotalAvaliacoes;
@@ -9,7 +9,7 @@ public class Titulo {
     private int duracaoEmMinutos;
 
     public void exibirFichaTecnica(){
-        System.out.println("Nome do filme: " + nomeDoFilme);
+        System.out.println("Nome do filme: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
     }
 
@@ -18,12 +18,12 @@ public class Titulo {
         totalDeAvaliacoes++;
     }
 
-    public double MediaAvaliacao(){
+    public double mediaAvaliacao(){
         return valorTotalAvaliacoes / totalDeAvaliacoes;
     }
 
-    public String getNomeDoFilme() {
-        return nomeDoFilme;
+    public String getNome() {
+        return nome;
     }
 
     public int getAnoDeLancamento() {
@@ -50,8 +50,8 @@ public class Titulo {
         this.anoDeLancamento = anoDeLancamento;
     }
 
-    public void setNomeDoFilme(String nomeDoFilme) {
-        this.nomeDoFilme = nomeDoFilme;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public void setIncluidoNoPlano(boolean incluidoNoPlano) {
