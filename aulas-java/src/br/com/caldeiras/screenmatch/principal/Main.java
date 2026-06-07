@@ -1,43 +1,61 @@
 package br.com.caldeiras.screenmatch.principal;
 
-import br.com.caldeiras.screenmatch.modelos.MinhasPreferidas;
-import br.com.caldeiras.screenmatch.modelos.Musica;
-import br.com.caldeiras.screenmatch.modelos.Podcast;
+import br.com.caldeiras.screenmatch.modelos.Filme;
+import br.com.caldeiras.screenmatch.modelos.Serie;
+
+import java.util.ArrayList;
 
 public class Main{
     public static void main(String[] args) {
 
-        MinhasPreferidas minhasPreferidas = new MinhasPreferidas();
+        Filme filme = new Filme(
+                "Interestelar",
+                2014,
+                true,
+                45,
+                "Christopher Nolan"
+        );
 
-        Musica musica = new Musica();
+        Filme filme2 = new Filme(
+                "O Senhor dos Anéis: A Sociedade do Anel",
+                2001,
+                true,
+                48,
+                "Peter Jackson"
+        );
 
-        musica.setTitulo("Bohemian Rhapsody");
-        musica.setAlbum("A Night at the Opera");
-        musica.setArtista("Queen");
-        musica.setGenero("Rock");
+        Serie serie = new Serie(
+                "Stranger Things",
+                2016,
+                true,
+                0,
+                4,
+                true,
+                9,
+                50
+        );
 
-        Podcast podcast = new Podcast();
+        Serie serie2 = new Serie(
+                "Breaking Bad",
+                2008,
+                true,
+                0,
+                5,
+                false,
+                13,
+                47
+        );
 
-        podcast.setTitulo("Conversa Semanal");
-        podcast.setHost("João Silva");
-        podcast.setDescricao("Podcast com bate-papos sobre diversos assuntos do cotidiano.");
+        ArrayList<Filme> filmes = new ArrayList<>();
+        filmes.add(filme);
+        filmes.add(filme2);
 
-        for (int i = 0; i < 500; i++){
-            musica.reproduz();
-        }
-        for (int i = 0; i < 100; i++){
-            musica.curte();
-        }
+        ArrayList<Serie> series = new ArrayList<>();
+        series.add(serie);
+        series.add(serie2);
 
-        for (int i = 0; i < 6; i++){
-            podcast.reproduz();
-        }
-        for (int i = 0; i < 2; i++){
-            podcast.curte();
-        }
-
-        minhasPreferidas.inclui(musica);
-        minhasPreferidas.inclui(podcast);
+        System.out.println(filmes);
+        System.out.println(series);
 
     }
 }
