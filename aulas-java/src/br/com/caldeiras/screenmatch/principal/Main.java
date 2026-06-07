@@ -2,11 +2,15 @@ package br.com.caldeiras.screenmatch.principal;
 
 import br.com.caldeiras.screenmatch.modelos.Filme;
 import br.com.caldeiras.screenmatch.modelos.Serie;
+import br.com.caldeiras.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Main{
     public static void main(String[] args) {
+        Random random = new Random();
+
 
         Filme filme = new Filme(
                 "Interestelar",
@@ -46,6 +50,8 @@ public class Main{
                 47
         );
 
+
+
         ArrayList<Filme> filmes = new ArrayList<>();
         filmes.add(filme);
         filmes.add(filme2);
@@ -54,8 +60,25 @@ public class Main{
         series.add(serie);
         series.add(serie2);
 
-        System.out.println(filmes);
-        System.out.println(series);
+        ArrayList<Titulo> assistidos = new ArrayList<>();
+
+        assistidos.add(filme);
+        assistidos.add(filme2);
+        assistidos.add(serie);
+        assistidos.add(serie2);
+
+        for (Titulo x: assistidos){
+            if(x instanceof Filme){
+                x.avalia(random.nextInt(6) + 5);
+                x.avalia(random.nextInt(6) + 5);
+            }
+
+
+        }
+
+        for(Titulo x: assistidos){
+            System.out.println(x);
+        }
 
     }
 }

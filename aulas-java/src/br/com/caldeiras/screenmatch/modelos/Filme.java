@@ -28,6 +28,6 @@ public class Filme extends Titulo implements Classificavel {
     public String toString() {
         return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")\n"
                 + "Diretor: " + this.getDiretor() + "\n"
-                + "Nota: " + this.getClassificacao()+ "\n\n";
+                + "Estrelas: " + this.getClassificacao()+ "\n\n";
     }
 }

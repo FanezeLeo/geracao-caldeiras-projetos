@@ -2,7 +2,7 @@ package br.com.caldeiras.screenmatch.modelos;
 
 import br.com.caldeiras.screenmatch.calculos.Classificavel;
 
-public class Serie extends Titulo implements Classificavel {
+public class Serie extends Titulo {
     private int temporadas;
     private boolean ativa;
     private int episodiosPorTemporada;
@@ -55,13 +55,7 @@ public class Serie extends Titulo implements Classificavel {
     }
 
     @Override
-    public int getClassificacao() {
-        return (int) pegaMedia() / 2;
-    }
-
-    @Override
     public String toString() {
-        return "Serie: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")\n"
-                + "Nota: " + this.getClassificacao() + "\n\n";
+        return "Serie: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")\n\n";
     }
 }
