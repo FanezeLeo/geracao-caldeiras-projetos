@@ -4,10 +4,7 @@ import br.com.caldeiras.screenmatch.modelos.Filme;
 import br.com.caldeiras.screenmatch.modelos.Serie;
 import br.com.caldeiras.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Random;
+import java.util.*;
 
 public class Main{
     public static void main(String[] args) {
@@ -54,15 +51,15 @@ public class Main{
 
 
 
-        ArrayList<Filme> filmes = new ArrayList<>();
+        List<Filme> filmes = new ArrayList<>();
         filmes.add(filme);
         filmes.add(filme2);
 
-        ArrayList<Serie> series = new ArrayList<>();
+        List<Serie> series = new ArrayList<>();
         series.add(serie);
         series.add(serie2);
 
-        ArrayList<Titulo> assistidos = new ArrayList<>();
+        List<Titulo> assistidos = new ArrayList<>();
 
         assistidos.add(filme);
         assistidos.add(filme2);
