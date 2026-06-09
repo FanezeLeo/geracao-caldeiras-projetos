@@ -6,6 +6,7 @@ import br.com.caldeiras.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Random;
 
 public class Main{
@@ -67,7 +68,8 @@ public class Main{
         assistidos.add(filme2);
         assistidos.add(serie);
         assistidos.add(serie2);
-        Collections.sort(assistidos);
+//        Collections.sort(assistidos);
+        assistidos.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
 
         for (Titulo x: assistidos){
             if(x instanceof Filme){
