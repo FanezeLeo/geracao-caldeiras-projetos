@@ -1,6 +1,6 @@
 package br.com.caldeiras.screenmatch.modelos;
 
-public class Titulo implements Comparable<Titulo>{
+public class Titulo implements Comparable<Titulo> {
     private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
@@ -8,25 +8,9 @@ public class Titulo implements Comparable<Titulo>{
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
-    public Titulo(String nome, int anoDeLancamento, boolean incluidoNoPlano, int duracaoEmMinutos) {
+    public Titulo(String nome, int anoDeLancamento) {
         this.nome = nome;
         this.anoDeLancamento = anoDeLancamento;
-        this.incluidoNoPlano = incluidoNoPlano;
-        this.duracaoEmMinutos = duracaoEmMinutos;
-    }
-
-    public void exibeFichaTecnica(){
-        System.out.println("Nome do filme: " + nome);
-        System.out.println("Ano de lançamento: " + anoDeLancamento);
-    }
-
-    public void avalia(double nota){
-        somaDasAvaliacoes += nota;
-        totalDeAvaliacoes++;
-    }
-
-    public double pegaMedia(){
-        return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
     public String getNome() {
@@ -65,8 +49,22 @@ public class Titulo implements Comparable<Titulo>{
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
+    public void exibeFichaTecnica(){
+        System.out.println("Nome do filme: " + nome);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
+    }
+
+    public void avalia(double nota){
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
+    }
+
+    public double pegaMedia(){
+        return somaDasAvaliacoes / totalDeAvaliacoes;
+    }
+
     @Override
-    public int compareTo(Titulo titulo) {
-        return this.getNome().compareTo(titulo.getNome());
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
     }
 }

@@ -1,20 +1,13 @@
 package br.com.caldeiras.screenmatch.modelos;
 
-import br.com.caldeiras.screenmatch.calculos.Classificavel;
-
 public class Serie extends Titulo {
     private int temporadas;
     private boolean ativa;
     private int episodiosPorTemporada;
     private int minutosPorEpisodio;
 
-    public Serie(String nome, int anoDeLancamento, boolean incluidoNoPlano,
-                 int duracaoEmMinutos, int temporadas, boolean ativa, int episodiosPorTemporada, int minutosPorEpisodio) {
-        super(nome, anoDeLancamento, incluidoNoPlano, duracaoEmMinutos);
-        this.temporadas = temporadas;
-        this.ativa = ativa;
-        this.episodiosPorTemporada = episodiosPorTemporada;
-        this.minutosPorEpisodio = minutosPorEpisodio;
+    public Serie(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
     }
 
     public int getTemporadas() {
@@ -56,6 +49,6 @@ public class Serie extends Titulo {
 
     @Override
     public String toString() {
-        return "Serie: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")\n\n";
+        return "Série: " + this.getNome() + "(" + this.getAnoDeLancamento() + ")";
     }
 }

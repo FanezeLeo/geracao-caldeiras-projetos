@@ -5,10 +5,8 @@ import br.com.caldeiras.screenmatch.calculos.Classificavel;
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
-    public Filme(String nome, int anoDeLancamento, boolean incluidoNoPlano,
-                 int duracaoEmMinutos, String diretor) {
-        super(nome, anoDeLancamento, incluidoNoPlano, duracaoEmMinutos);
-        this.diretor = diretor;
+    public Filme(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
     }
 
     public String getDiretor() {
@@ -26,8 +24,6 @@ public class Filme extends Titulo implements Classificavel {
 
     @Override
     public String toString() {
-        return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")\n"
-                + "Diretor: " + this.getDiretor() + "\n"
-                + "Estrelas: " + this.getClassificacao()+ "\n\n";
+        return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
     }
 }
