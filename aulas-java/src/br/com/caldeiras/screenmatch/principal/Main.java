@@ -5,6 +5,7 @@ import br.com.caldeiras.screenmatch.modelos.Serie;
 import br.com.caldeiras.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class Main{
@@ -66,19 +67,17 @@ public class Main{
         assistidos.add(filme2);
         assistidos.add(serie);
         assistidos.add(serie2);
+        Collections.sort(assistidos);
 
         for (Titulo x: assistidos){
             if(x instanceof Filme){
                 x.avalia(random.nextInt(6) + 5);
                 x.avalia(random.nextInt(6) + 5);
             }
-
-
         }
 
         for(Titulo x: assistidos){
             System.out.println(x);
         }
-
     }
 }
