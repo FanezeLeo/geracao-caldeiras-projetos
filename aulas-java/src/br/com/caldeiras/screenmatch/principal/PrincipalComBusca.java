@@ -1,5 +1,11 @@
 package br.com.caldeiras.screenmatch.principal;
 
+import br.com.caldeiras.screenmatch.modelos.Titulo;
+import br.com.caldeiras.screenmatch.modelos.TituloOmdb;
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -24,6 +30,15 @@ public class PrincipalComBusca {
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
 
-        System.out.println(response.body());
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .create();
+        String json = response.body();
+
+        TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+
+        Titulo meuTitulo = new Titulo(meuTituloOmdb);
+
+        System.out.println(meuTitulo);
     }
 }
