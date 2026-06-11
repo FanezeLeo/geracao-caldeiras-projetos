@@ -1,11 +1,10 @@
 package br.com.caldeiras.screenmatch.modelos;
 
+import br.com.caldeiras.screenmatch.excecao.ErroDadoInvalido;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Comparable<Titulo> {
-    @SerializedName("Title")
     private String nome;
-    @SerializedName("Year")
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
@@ -18,8 +17,12 @@ public class Titulo implements Comparable<Titulo> {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
-    public Titulo(TituloOmdb tituloOmdb) {
+    public Titulo(TituloOmdb tituloOmdb) throws ErroDadoInvalido {
         this.nome = tituloOmdb.title();
+
+        if(tituloOmdb.year().length() > 4){
+            throw new ErroDadoInvalido("Um dos valores inseridos no filme é invalido");
+        }
         this.anoDeLancamento = Integer.parseInt(tituloOmdb.year());
         this.duracaoEmMinutos = Integer.parseInt(tituloOmdb.runtime().substring(0, 2));
     }
